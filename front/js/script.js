@@ -1,5 +1,5 @@
-// fetch('https://cdk-kanap.herokuapp.com/api/products')
-fetch('http://localhost:3000/api/products')
+// fetch('http://localhost:3000/api/products')
+fetch('https://kanap-backend-6zh7.onrender.com/api/products')
 	.then((response) => response.json())
 	.then((data) => {
 		// *** Affiche tout les produits
@@ -20,6 +20,9 @@ fetch('http://localhost:3000/api/products')
 		}
 
 		showAllProduct()
+	}).catch((error) => {
+		console.log('La connexion à l\'API a échoué')
+		console.log(error)
 	})
 
 // *** Rajouter la quantité totale à côté du panier (nav bar)

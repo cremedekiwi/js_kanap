@@ -2,8 +2,8 @@
 let idProduct = new URL(window.location.href).searchParams.get('id')
 
 // *** Connextion API
-// fetch('https://cdk-kanap.herokuapp.com/api/products')
-fetch('http://localhost:3000/api/products')
+// fetch('http://localhost:3000/api/products')
+fetch('https://kanap-backend-6zh7.onrender.com/api/products')
 	.then((response) => response.json())
 	.then((data) => {
 		// *** Trouver l'objet correspondant à l'ID : object._id vient de l'API && idProduct vient du searchParams
@@ -191,7 +191,8 @@ let cart = () => {
 cart()
 
 // *** Sécurité : si ID différent de l'API, on est redirigé à l'accueil
-fetch('http://localhost:3000/api/products')
+// fetch('http://localhost:3000/api/products')
+fetch('https://kanap-backend-6zh7.onrender.com/api/products')
 	.then((response) => response.json())
 	.then((data) => {
 		if (
